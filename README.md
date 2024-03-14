@@ -20,6 +20,8 @@ Transparent Communication: Throughout the KYC process, we maintain transparent c
 User Privacy: Protecting your privacy is our top priority. We employ robust security measures to safeguard your personal information and adhere to strict data protection protocols.
 
 View our website:https://abhikale022.github.io/online-kyc/
+<br/>
 Demo Video folder:https://drive.google.com/drive/folders/1fdxtvxAk1G-RHbhSOVX4uuzcm_xGslhs?usp=sharing
+<br/>
 In summary, our KYC website offers a convenient, secure, and efficient solution for identity verification. Whether you're a financial institution, online platform, or individual user, you can rely on us to facilitate a smooth and reliable KYC process. Thank you for choosing our platform for your identity verification needs.
 
