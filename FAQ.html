@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-question {
+            font-weight: bold;
+        }
+
+
+        .faq-answer.active {
+            display: block;
+            margin-top: 10px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50; 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049; 
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="navlist">
+        <li id="navli"><a class="active" href="index.html">Home</a></li>
+        <li id="navli"><a href="knowMore.html">Know More</a></li>
+    
+        <li id="navli" style="float:right"><a href="contactSupport.html">Contact Us</a></li>
+    </ul>
+
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <hr>
+        <div class="faq-item">
+            <div class="faq-question">Question 1: What is Online KYC?</div>
+            <br/>
+            <div class="faq-answer"><b>Answer:</b> Online KYC (Know Your Customer) is a digital process where businesses verify customer identities remotely, typically
+            through document submission and verification against databases, ensuring compliance and streamlined onboarding.
+                <br/>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="faq-item">
+            <div class="faq-question">Question 2: Which details need to be provided during KYC?</div>
+            <br/>
+            <div class="faq-answer"><b>Answer:</b> <ol>
+                <li>Name,DOB,Address</li>
+                <li>Adhaar Card/Pan card</li>
+                <li>Signature</li>
+                <li>Mobile Number</li>
+            </ol></div>
+        </div>
+        <hr>
+        <div class="faq-item">
+            <div class="faq-question">Question 3: Is Online KYC Secure?</div>
+            <br/>
+            <div class="faq-answer"><b>Answer:</b> Yes, online KYC processes are typically secure, employing encryption, secure servers, authentication, access controls,
+            compliance measures, monitoring, and data retention policies to safeguard sensitive customer information.</div>
+        </div>
+        <hr>
+        <div>
+            <div class="faq-question">Question 4: How long does the KYC process take?</div>
+            <br/>
+            <div class="faq-answer"><b>Answer:</b> The KYC process can vary in duration depending on the institution and the complexity of the
+            verification process. It may take anywhere from a few hours to several days to complete.</div>
+        </div>
+        <hr>
+        <div>
+            <div class="faq-question">Question 5: Are there any restrictions if my KYC verification is pending?</div>
+            <br />
+            <div class="faq-answer"><b>Answer:</b> Yes, there may be restrictions on your account if your KYC verification is pending. These restrictions could include
+            limitations on transactions or services until the verification process is completed.</div>
+        </div>
+        <br/>
+
+        <div class="form-group">
+            <button onclick="navigateTo('index.html')">HOME</button>
+        </div>
+        
+    </div>
+
+    <script>
+        function navigateTo(page) {
+                window.location.href = page;
+            }
+    </script>
+
+</body>
+
+</html>

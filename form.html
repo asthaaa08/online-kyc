@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Video KYC</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <ul id="navlist">
+        <li id="navli"><a class="active" href="index.html">Home</a></li>
+        <li id="navli"><a href="knowMore.html">Know More</a></li>
+    
+        <li id="navli" style="float:right"><a href="contactSupport.html">Contact Us</a></li>
+    </ul>
+
+    <div class="container">
+        <h1 id="title">Online Video KYC</h1>
+        <div class="step active" id="step1">
+            <h2>Step 1: Enter Personal Information</h2>
+            <form id="step1Form">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]+" placeholder="Example: John Dough">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required placeholder="421, Durien Estate, Goregaon Mulund Link Road, Goregaon( East)"></textarea>
+
+                <button id="nextbutton" type="button" onclick="nextStep()">Next</button>
+            </form>
+        </div>
+        <div class="step" id="step2">
+            <h2>Step 2: Upload Documents</h2>
+            <form id="step2Form">
+                <label for="pancard">PAN Card:</label>
+                <input type="file" id="pancard" name="pancard" accept="image/*" required>
+                <div id="pancardPreview"></div>
+        
+                <br><label for="aadhaar">Aadhaar Card:</label>
+                <input type="file" id="aadhaar" name="aadhaar" accept="image/*" required>
+                <div id="aadhaarPreview"></div>
+        
+                <br><label for="signature">Signature:</label>
+                <input type="file" id="signature" name="signature" accept="image/*" required>
+                <div id="signaturePreview"></div>
+                <br><br>
+                <div class="videocapture">
+                    <br><label for="capturedImage">Captured Image:</label>
+                    <img class="overlayimage" src="image.png" alt="outline">
+                    <img id="capturedImage" style="display: none;" alt="Captured Image">
+                    <video id="video" width="600" height=400" autoplay></video>
+                </div>
+                <br>
+                <br>
+                <br><button type="button" id="captureButton" onclick="captureImage()">Capture</button>
+                <canvas id="canvas" width="600" height="450" style="display: none; z-index: -1;"></canvas>
+        
+        
+                <button id="prevbutton" type="button" onclick="prevStep()">Previous</button>
+                <button id="nextbutton" type="button" onclick="nextStep()">Next</button>
+            </form>
+        </div>
+        <div class="step" id="step3">
+            <h2>Step 3: Additional Information</h2>
+            <form id="step3Form">
+                <label for="income">Income Range:</label>
+                <select id="income" name="income" required>
+                    <option value="">Select Income Range</option>
+                    <option value="₹10000">₹0 to ₹10000</option>
+                    <option value="₹5000">₹10000 to ₹50000</option>
+                    <option value="₹100000">₹50000 to ₹100000</option>
+                    <option value="₹100000+">Greater than ₹100000</option>
+                </select>
+
+                <label for="employment">Type of Employment:</label>
+                <select id="employment" name="employment" required>
+                    <option value="">Select Employment Type</option>
+                    <option value="fulltime">Full-time</option>
+                    <option value="parttime">Part-time</option>
+                    <option value="selfemployed">Self-employed</option>
+                </select>
+                <br>
+                <button id="prevbutton" type="button" onclick="prevStep()">Previous</button>
+                <button id="Submitbutton"type="button" onclick="validateForm() && navigateTo('index.html')">Submit</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <button id="chatbot-button" onclick="toggleChatbot()">Chat</button>
+
+    <div id="chatbot-container">
+        
+        <h2><center><b><u>Chat-Assist</u></b></center></h2>
+        <pre> Welcome to our website's chat-assist!</pre>
+        <pre>
+        </pre>
+        <ul>
+            <li><button onclick="navigateTo('FAQ.html')" style="font-size: medium;" id="chat-assist">FAQ's</button></li>
+            <br><li><button onclick="navigateTo('reportIssue.html')"style="font-size: medium;" id="chat-assist">Report an Issue</button></li>
+            <br><li><button onclick="navigateTo('contactSupport.html')" style="font-size: medium;" id="chat-assist">Contact Support</button></li>
+            <br><li><button onclick="navigateTo('knowMore.html')" style="font-size: medium;" id="chat-assist">Know More About Us</button></li>
+            <br><li><button onclick="navigateTo('validation.html')" style="font-size: medium;" id="chat-assist">Validation Status</button></li>
+            <br><li><button onclick="closeChatbot()" style="font-size: medium;" id="chat-assist">Close</button></li>
+            
+        </ul>
+    </div>
+
+    <script src="script.js">
+
+   
+</script>
+
+</body>
+</html>

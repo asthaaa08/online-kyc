@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .issue-form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 10px; 
+        }
+
+        .form-group button:hover {
+            background-color: #45a049; 
+        }
+
+        .file-upload {
+            margin-top: 10px;
+        }
+
+        .success-message {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="navlist">
+        <li id="navli"><a class="active" href="index.html">Home</a></li>
+        <li id="navli"><a href="knowMore.html">Know More</a></li>
+    
+        <li id="navli" style="float:right"><a href="contactSupport.html">Contact Us</a></li>
+    </ul>
+
+    <div class="issue-form-container">
+        <h2>Report an Issue</h2>
+        <div class="success-message" id="success-message">Form Submitted Successfully!</div>
+        <div class="error-message" id="error-message">Please fill out all required fields and attach a file.</div>
+        <form id="issue-form">
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="details">Issue Details:</label>
+                <textarea id="details" name="details" required></textarea>
+            </div>
+            <div class="form-group file-upload">
+                <label for="attachment">Attach a File:</label>
+                <input type="file" id="attachment" name="attachment" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button onclick="navigateTo('index.html')">Home</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("issue-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+            var subject = document.getElementById("subject").value.trim();
+            var details = document.getElementById("details").value.trim();
+            var attachment = document.getElementById("attachment").value.trim();
+            if (subject !== "" && details !== "" && attachment !== "") {
+                // Form submission successful
+                document.getElementById("success-message").style.display = "block";
+                document.getElementById("error-message").style.display = "none";
+                // You can add your form submission logic here
+                var formData = new FormData(this);
+                for (var pair of formData.entries()) {
+                    console.log(pair[0] + ": " + pair[1]);
+                }
+                // Clear the form fields after submission
+                this.reset();
+            } else {
+                // Form submission failed
+                document.getElementById("error-message").style.display = "block";
+                document.getElementById("success-message").style.display = "none";
+            }
+        });
+        function navigateTo(page) {
+                window.location.href = page;
+            }
+    </script>
+
+</body>
+
+</html>

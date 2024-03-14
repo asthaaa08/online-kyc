@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body{
+            background-image:url('KYC_logo.png');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        
+
+    </style>
+</head>
+<body>
+<ul id="navlist">
+    <li id="navli"><a class="active" href="index.html">Home</a></li>
+    <li id="navli"><a href="knowMore.html">Know More</a></li>
+
+    <li id="navli" style="float:right"><a href="contactSupport.html">Contact Us</a></li>
+</ul>
+    <center>
+     
+       <div style="margin-top:475px; color: white;"> 
+        <p>Know Your Client</p>
+        <br><button onclick="navigateTo('form.html')" id="nextbutton" style="background-color: black;">Start KYC</button>
+        <p>It take only 3 Mins</p>
+        </div>
+       
+    </center>
+    <button id="chatbot-button" onclick="toggleChatbot()">Chat</button>
+    
+    <div id="chatbot-container">
+    
+        <h2>
+            <center><b><u>Chat-Assist</u></b></center>
+        </h2>
+        <pre> Welcome to our website's chat-assist!</pre>
+        <pre>
+            </pre>
+        <ul>
+            <li><button onclick="navigateTo('FAQ.html')" style="font-size: medium;" id="chat-assist">FAQ's</button></li>
+            <br>
+            <li><button onclick="navigateTo('reportIssue.html')" style="font-size: medium;" id="chat-assist">Report an
+                    Issue</button></li>
+            <br>
+            <li><button onclick="navigateTo('contactSupport.html')" style="font-size: medium;" id="chat-assist">Contact
+                    Support</button></li>
+            <br>
+            <li><button onclick="navigateTo('knowMore.html')" style="font-size: medium;" id="chat-assist">Know More About
+                    Us</button></li>
+            <br>
+            <li><button onclick="navigateTo('validation.html')" style="font-size: medium;" id="chat-assist">Validation
+                    Status</button></li><br/>
+            <li><button onclick="closeChatbot()" style="font-size: medium;" id="chat-assist">Close</button></li>
+    
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
