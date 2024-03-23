@@ -1,5 +1,5 @@
 # online-kyc
-Welcome to our Know Your Customer (KYC) website, where we offer a seamless and secure solution for identity verification. Our platform is designed with user convenience in mind, ensuring a hassle-free experience throughout the KYC process.
+Welcome to our Know Your Customer (KYC) website, where we offer a seamless and secure solution for identify verification. Our platform is designed with user convenience in mind, ensuring a hassle-free experience throughout the KYC process.
 
 Here's how it works:
 
