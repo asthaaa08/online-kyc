@@ -19,7 +19,7 @@ Transparent Communication: Throughout the KYC process, we maintain transparent c
 
 User Privacy: Protecting your privacy is our top priority. We employ robust security measures to safeguard your personal information and adhere to strict data protection protocols.
 
-View our website:https://abhikale022.github.io/online-kyc/
+View our website: https://asthaaa08.github.io/online-kyc/
 <br/>
 Demo Video folder:https://drive.google.com/drive/folders/1fdxtvxAk1G-RHbhSOVX4uuzcm_xGslhs?usp=sharing
 <br/>
